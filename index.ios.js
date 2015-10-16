@@ -26,12 +26,11 @@ var NowPlayingActions = require('./scripts/actions/now-playing-actions');
 var TracksCollectionActions = require('./scripts/actions/tracks-collection-actions');
 var AVPlayerManagerUtil = require('./scripts/utils/av-player-manager-util');
 var AppConstants = require('./scripts/constants/app-constants');
-var Icon = require('FAKIconImage');
-
+var { Icon, } = require('react-native-icons');
 var ReactNativeMusic = React.createClass({
 
   componentDidMount: function() {
-    NowPlayingStore.addChangeListener(this.onChange);  
+    NowPlayingStore.addChangeListener(this.onChange);
   },
 
   componentWillUnmount: function() {
@@ -62,7 +61,7 @@ var ReactNativeMusic = React.createClass({
     return (
       <View style={styles.appContainer}>
         <NavigatorIOS style={styles.navContainer}
-          barTintColor='#F5FCFF' 
+          barTintColor='#F5FCFF'
           initialRoute={{
             title: 'ReactNativeMusic',
             component: BrowseTracksView
@@ -130,7 +129,7 @@ var BrowseTracksView = React.createClass({
 
   render: function () {
     return (
-      <ListView 
+      <ListView
         dataSource={this.state.dataSource}
         renderRow={this.renderTrack}
         renderHeader={this.renderSearchBar}

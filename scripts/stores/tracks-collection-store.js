@@ -1,6 +1,6 @@
 /** The global store for the current tracks collection **/
 
-var EventEmitter = require('events').EventEmitter;
+var EventEmitter = require('events');
 var AppDispatcher = require('./../../app-dispatcher');
 var TracksCollectionConstants = require('../constants/tracks-collection-constants');
 var TracksApiUtil = require('../utils/tracks-api-util');

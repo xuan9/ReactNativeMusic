@@ -1,6 +1,6 @@
 /** The global store for NowPlaying state **/
 
-var EventEmitter = require('events').EventEmitter;
+var EventEmitter = require('events');
 var AppDispatcher = require('./../../app-dispatcher');
 var NowPlayingConstants = require('../constants/now-playing-constants');
 
